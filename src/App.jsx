@@ -53,7 +53,7 @@ export default function App() {
   //       skill1:"Machine Learning",
   //       skill2:"Data Analysis",
   //       skill3:"Data Visualization",
-  //       }
+  //       }dnefndeknfv
   //   }
 
   //  ]
