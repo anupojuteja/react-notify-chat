@@ -1,106 +1,61 @@
-// import React from 'react';
-// import Notification from './components/notifications/Notification';
-
-
-// function App() {
-//   return (
-//     <div>
-//       <h2>📬 Notifications</h2>
-//       <Notification />
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
-
-
-import React from 'react'
-
-import "./App.css"
-
-import Notification from './components/notifications/Notification'
-
+import React from "react";
+import Notification from "./components/notifications/Notification";
+import TodoList from "./components/TodoList";
+import "./App.css";
 
 export default function App() {
-  //  const Cards = [
-  //   {
-  //     userName:"Shalini",
-  //     userImage:"https://picsum.photos/200/300",
-  //     description:"Software Developer",
-  //     Skills:{
-  //       skill1:"React",
-  //       skill2:"JavaScript",
-  //       skill3:"HTML/CSS",
-  //     }
-  //   },
-  //   {
-  //     userName:"Rahul",
-  //     userImage:"https://picsum.photos/200/300",
-  //     description:"Full Stack Developer",
-  //     Skills:{
-  //       skill1:"Python",
-  //       skill2:"Django",
-  //       skill3:"Sql"
-  //       }
-  //       },
-  //   {
-  //     userName:"Sonal",
-  //     userImage:"https://picsum.photos/200/300",
-  //     description:"Data Scientist",
-  //     Skills:{
-  //       skill1:"Machine Learning",
-  //       skill2:"Data Analysis",
-  //       skill3:"Data Visualization",
-  //       }dnefndeknfv
-  //   }
-
-  //  ]
   const notifications = [
     {
       id: 1,
-      type: 'info',
-      message: 'Your profile has been updated successfully.',
-      timestamp: '2025-04-10T10:30:00',
-      isRead: false
+      type: "info",
+      message: "Your profile has been updated successfully.",
+      timestamp: "2025-04-10T10:30:00",
+      isRead: false,
     },
     {
       id: 2,
-      type: 'warning',
-      message: 'Password will expire in 5 days.',
-      timestamp: '2025-04-09T09:15:00',
-      isRead: true
+      type: "warning",
+      message: "Password will expire in 5 days.",
+      timestamp: "2025-04-09T09:15:00",
+      isRead: true,
     },
     {
       id: 3,
-      type: 'message',
-      message: 'You have a new message from John.',
-      timestamp: '2025-04-08T18:45:00',
-      isRead: false
+      type: "message",
+      message: "You have a new message from John.",
+      timestamp: "2025-04-08T18:45:00",
+      isRead: false,
     },
     {
       id: 4,
-      type: 'error',
-      message: 'Failed to connect to the server.',
-      timestamp: '2025-04-07T12:00:00',
-      isRead: true
+      type: "error",
+      message: "Failed to connect to the server.",
+      timestamp: "2025-04-07T12:00:00",
+      isRead: true,
     },
     {
       id: 5,
-      type: 'success',
-      message: 'Payment received successfully.',
-      timestamp: '2025-04-06T08:20:00',
-      isRead: false
-    }
+      type: "success",
+      message: "Payment received successfully.",
+      timestamp: "2025-04-06T08:20:00",
+      isRead: false,
+    },
   ];
-  
+
   return (
-    <div className='mainCon'>
-   
-
+    <div className="min-h-screen bg-gray-50 py-10">
+      {/* Notifications Section */}
+      <section className="max-w-4xl mx-auto px-4 mb-10">
+        <h2 className="text-2xl font-bold text-indigo-600 mb-6 text-center">
+          📬 Notifications
+        </h2>
         <Notification notification={notifications} />
+      </section>
 
+      {/* Todo List Section */}
+      <section className="max-w-4xl mx-auto px-4">
+        <TodoList />
+      </section>
     </div>
-  )
+  );
 }
